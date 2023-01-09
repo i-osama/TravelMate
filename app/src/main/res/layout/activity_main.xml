@@ -93,12 +93,18 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/famBdRecycler"
 
-                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="4"/>
+                    tools:listitem="@layout/famous_bd_recycler"/>
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/_4sdp"-->
+<!--                    android:background="@color/white"/>-->
+
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/allPlacesContainer"
@@ -125,12 +131,14 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/allPlacesRecycler"
 
+                    tools:listitem="@layout/all_place_bd_recycler"
                     android:layout_marginStart="@dimen/_8sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="1"/>
+                    app:spanCount="1"
+                    android:layout_marginBottom="@dimen/_4sdp"/>
             </LinearLayout>
 
 
