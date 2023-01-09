@@ -17,6 +17,7 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/sliderContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="65dp"
@@ -47,6 +48,91 @@
                 app:iss_placeholder="@drawable/flower_garden_img"
                 app:iss_error_image="@drawable/flower_garden_img" />
             </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:queryHint="Search district or places here"
+                android:background="#31BADDFA"
+
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/sliderContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/famBdContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/search_bar">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:text="Famous in Bangladesh"
+                    android:textStyle="bold"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/famBdRecycler"
+
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="4"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/allPlacesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/famBdContainer">
+
+<!--                Water Body Attractions-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:text="All in Bangladesh"
+                    android:textStyle="bold"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/allPlacesRecycler"
+
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="1"/>
+            </LinearLayout>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
