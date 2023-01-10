@@ -2,7 +2,9 @@ package com.zeeshan_s.travelmate.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -36,5 +38,14 @@ public class MainActivity extends AppCompatActivity {
         imageList.add(new SlideModel(R.drawable.mars_human_colony_img,"Mars", ScaleTypes.CENTER_CROP));
 
         binding.imageSlider.setImageList(imageList);
+
+        binding.searchBar.setOnClickListener(view -> {
+//            Log.i("TAG", "onCreate:-----------------Main search ");
+//
+//            Intent intent  = new Intent(MainActivity.this, Search_Item_BucketActivity.class);
+//            startActivity(intent);
+            startActivity(new Intent(MainActivity.this, Search_Item_BucketActivity.class));
+            finish();
+        });
     }
 }

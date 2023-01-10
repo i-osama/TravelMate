@@ -49,13 +49,19 @@
                 app:iss_error_image="@drawable/flower_garden_img" />
             </androidx.cardview.widget.CardView>
 
-            <androidx.appcompat.widget.SearchView
+            <TextView
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                app:queryHint="Search district or places here"
-                android:background="#31BADDFA"
+                android:drawableStart="@drawable/search_icon"
+                android:textSize="@dimen/_16sdp"
+
+                android:padding="@dimen/_6sdp"
+
+                android:hint="Click here to search"
+                android:maxLines="1"
+                android:background="#5BBADDFA"
 
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginBottom="@dimen/_15sdp"
@@ -132,7 +138,8 @@
                     android:id="@+id/allPlacesRecycler"
 
                     tools:listitem="@layout/all_place_bd_recycler"
-                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
