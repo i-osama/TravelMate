@@ -18,26 +18,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
+
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        app:queryHint="Search district or places here"
-        android:background="#6FBADDFA"
-
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
         android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="4dp"
+
         android:layout_marginEnd="@dimen/_8sdp"
-
+        android:background="#6FBADDFA"
         android:paddingStart="@dimen/_10sdp"
+
         android:paddingEnd="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/backBtn"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/backBtn"
+        app:queryHint="Search district or places here" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/allPlacesRecycler"
