@@ -1,20 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.MainActivity">
 
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220sdp"
+        android:src="@drawable/travel4"
+        android:id="@+id/img1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+    <ImageView
+        android:layout_width="@dimen/_500sdp"
+        android:layout_height="match_parent"
+        android:src="@drawable/circle"
+        android:id="@+id/img2"
+        android:layout_marginTop="@dimen/_150sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_100sdp"
+        android:text="TravelMate"
+        android:textColor="@color/white_background"
+        android:textStyle="bold"
+        android:paddingEnd="@dimen/_50sdp"
+        android:background="@drawable/toolback"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/appname"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appname"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+
+
+
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/sliderContainer"
@@ -22,12 +73,10 @@
                 android:layout_height="wrap_content"
                 app:cardElevation="65dp"
                 app:cardCornerRadius="@dimen/_6sdp"
-
-                android:layout_marginTop="@dimen/_12sdp"
                 android:layout_marginBottom="@dimen/_12sdp"
-                android:layout_marginStart="@dimen/_12sdp"
-                android:layout_marginEnd="@dimen/_12sdp"
-
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:foregroundGravity="center"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -37,14 +86,12 @@
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/image_slider"
                 android:layout_width="wrap_content"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 app:iss_auto_cycle="true"
-                app:iss_period="1000"
+                app:iss_period="700"
                 app:iss_delay="0"
                 android:gravity="center"
-
                 android:textAlignment="center"
-
                 app:iss_placeholder="@drawable/flower_garden_img"
                 app:iss_error_image="@drawable/flower_garden_img" />
             </androidx.cardview.widget.CardView>
@@ -53,24 +100,19 @@
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:drawableStart="@drawable/search_icon"
                 android:textSize="@dimen/_16sdp"
-
                 android:padding="@dimen/_6sdp"
-
+                android:textColorHint="@color/white_background"
                 android:hint="Click here to search"
-                android:maxLines="1"
-                android:background="#5BBADDFA"
-
+                android:background="@drawable/back"
+                android:textColor="@color/white"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginBottom="@dimen/_15sdp"
                 android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_8sdp"
-
                 android:paddingStart="@dimen/_10sdp"
                 android:paddingEnd="@dimen/_10sdp"
-
                 app:layout_constraintTop_toBottomOf="@id/sliderContainer"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
@@ -84,17 +126,24 @@
 
                 app:layout_constraintTop_toBottomOf="@id/search_bar">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="@dimen/_8sdp"
-                    android:paddingEnd="@dimen/_8sdp"
-                    android:text="Famous in Bangladesh"
-                    android:textStyle="bold"
 
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_16sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_4sdp"
+
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:background="@drawable/toolback"
+                        android:text="Famous in Bangladesh"
+                        android:textStyle="bold"
+                        android:textColor="@color/white_background"
+                        android:textSize="@dimen/_16sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/famBdRecycler"
@@ -123,28 +172,28 @@
 
 <!--                Water Body Attractions-->
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingStart="@dimen/_8sdp"
-                    android:paddingEnd="@dimen/_8sdp"
                     android:text="All in Bangladesh"
                     android:textStyle="bold"
-
-                    android:textColor="@color/black"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:background="@drawable/toolback"
+                    android:textColor="@color/white_background"
                     android:textSize="@dimen/_16sdp"
                     android:layout_marginBottom="@dimen/_5sdp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/allPlacesRecycler"
+                   app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3"
+                    tools:listitem="@layout/famous_bd_recycler"
 
-                    tools:listitem="@layout/all_place_bd_recycler"
-                    android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginEnd="@dimen/_6sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="1"
                     android:layout_marginBottom="@dimen/_4sdp"/>
             </LinearLayout>
 
